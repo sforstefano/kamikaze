@@ -1,0 +1,53 @@
+<link rel="stylesheet" type="text/css" href="stylesheets/peliculas.css.scss">
+<div class="row hidden-xs">
+	<% if user_signed_in? %>
+		<p class="logg"> <%=link_to "Inicio", root_path %></p>
+		<p class="logg" ><%= link_to "Editar Pelicula", edit_pelicula_path %></p>
+		<p class="logg"><%= link_to 'Borrar pelicula', pelicula_path(@pelicula), :method => :delete %></p>
+				<p class="logg"> <%=link_to "Salir", destroy_user_session_path, :method => :delete %></p>
+	<% else %>
+		<p class="logg"> <%=link_to "Inicio", root_path %></p>
+		<p class="logg" ><%=link_to "Entrar", new_user_session_path %></p>
+		<p class="logg"><%=link_to "Registrate", new_user_registration_path %></p>
+	<% end %>
+	<div class="col-lg-12">
+		<div class="head">
+			<img class="imagen img-responsive" src="http://res.cloudinary.com/se-or/image/upload/v1496246942/fondo_ua1eam.jpg">
+			<% if user_signed_in? %>
+			<% end %>
+		</div>
+	</div>
+</div>
+<div class="row visible-xs">
+	<% if user_signed_in? %>
+		<button class="xs"><%= link_to "Inicio", root_path %></button>
+		<button class="xs"><%=link_to "Salir", destroy_user_session_path, :method => :delete %></button>
+	<% else %>
+		<button class="xs"><%= link_to "Inicio", root_path %></button>
+		<button class="xs"><%=link_to "Entrar", new_user_session_path %></button><br/>
+	<% end %>
+</div>
+<div class="container">
+	<div class="show">
+		<div class="col-lg-6">
+			<div class="showPeli">
+				<h1><%= @pelicula.name %></h1>
+				<br/>
+				<p>Estrellas: <%= @pelicula.stars %></p>
+				<br/>
+				<p>Protagonizada por <%= @pelicula.main_actor %></p>
+				<br/>
+				<p><%= @pelicula.year %></p>
+				<br/>
+				<p><%= @pelicula.description %></p>
+				<br/>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<%= image_tag @pelicula.poster.url(:medium) %>
+		</div>
+	</div>
+</div>
+
+
+

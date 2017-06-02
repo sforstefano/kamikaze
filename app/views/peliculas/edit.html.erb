@@ -1,0 +1,71 @@
+<link rel="stylesheet" type="text/css" href="stylesheet/peliculas.css.scss">
+<div class="hidden-xs">
+<%= form_for @pelicula do |pelic|%>
+<div class="row">
+		<p class="logg"><%= pelic.submit "Guardar pelicula" %></p>
+		<p class="logg"><%= link_to 'Borrar pelicula', pelicula_path(@pelicula), :method => :delete %></p>
+		<p class="logg"> <%=link_to "Inicio", root_path %></p>
+	<div class="col-lg-12">
+		<div class="head">
+			<img class="imagen img-responsive" src="http://res.cloudinary.com/se-or/image/upload/v1496246942/fondo_ua1eam.jpg">
+			<% if user_signed_in? %>
+			<% end %>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+		<div class="col-lg-6 col-md-6">
+			<div class="editar"> 
+				
+				<br/>
+				<br/>
+					<p>Tiutulo</p>
+					<p><%= pelic.text_field :name  %></p>
+					<br/>
+					<p>Puntuación:</p>
+					<p><%= pelic.text_field :stars %></p>
+					<br/>
+					<p>Actor principal</p>
+					<p><%= pelic.text_field :main_actor %></p>
+					<br/>
+					<p>Año</p>
+					<p><%= pelic.text_field :year %></p>
+					<br/>
+					<p>Sinposis</p>
+					<p><%= pelic.text_field :description %></p>
+					<br/>
+					<p>Poster</p>
+					<p><%= pelic.file_field :poster %></p>
+					<br/>		 
+				<%end%>
+			</div>
+		</div>
+		<div class="col-lg-6 col-md-6">
+			<h3>Actual</h3>
+			<br/>
+				<div class="col-lg-6 col-md-6">
+					<div class="currentPeli">
+						<p><%= @pelicula.name %></p>
+						<br/>
+						<p>Estrellas: <%= @pelicula.stars %></p>
+						<br/>
+						<p>Protagonizada por <%= @pelicula.main_actor %></p>
+						<br/>
+						<p><%= @pelicula.year %></p>
+						<br/>
+						<p><%= @pelicula.description %></p>
+						<br/>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6">
+					<%= image_tag @pelicula.poster.url(:medium) %>
+				</div>
+		</div>
+</div>
+</div>
+<div class="col-xs-12 visible-xs">
+<p class="xsAviso">No disponible en versión mobil.</p>
+<br/>
+<button class="xs"><%=link_to "Volver a inicio", root_path %></button>
+</div>

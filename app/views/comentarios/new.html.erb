@@ -1,0 +1,7 @@
+<%= form_for @comentario do |comentt| %>
+	<p>
+		<%= comentt.label :coment %>
+		<%= comentt.text_field :coment %>
+	</p>
+<%= comentt.submit "Comentar" %>
+<% end %>

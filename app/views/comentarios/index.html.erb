@@ -1,0 +1,5 @@
+<% @comentarios.each do |com| %>
+	<p><%= link_to com.coment, com %> </p>
+<% end %>
+
+<button><%= link_to "Coemtar", new_comentario_path %> </button>

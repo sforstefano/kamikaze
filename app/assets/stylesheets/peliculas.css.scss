@@ -1,0 +1,258 @@
+// Place all the styles related to the peliculas controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.boton3{
+	text-align: center;
+	width: 7%;
+	margin-left: 5%;
+
+	a:link {
+		color: black;
+    	text-decoration: none;
+	}
+
+	a:visited {
+		color: black;
+    	text-decoration: none;
+	}
+
+	a:hover {
+		color: black;
+    	text-decoration: none;
+	}
+
+	a:active {
+		color: black;
+    	text-decoration: none;
+	}
+}
+.boton4{
+	text-align: center;
+	width: 12%;
+	margin-left: 4%;
+	margin-top: 4%;
+
+	a:link {
+		color: black;
+    	text-decoration: none;
+	}
+
+	a:visited {
+		color: black;
+    	text-decoration: none;
+	}
+
+	a:hover {
+		color: black;
+    	text-decoration: none;
+	}
+
+	a:active {
+		color: black;
+    	text-decoration: none;
+	}
+}
+.title{
+	text-align: center;
+}
+.year{
+	margin-left: 8%;
+	margin-right: 20%;
+	a:link {
+		color: black;
+    	text-decoration: none;
+	}
+
+	a:visited {
+		color: black;
+    	text-decoration: none;
+	}
+
+	a:hover {
+		color: black;
+    	text-decoration: none;
+	}
+
+	a:active {
+		color: black;
+    	text-decoration: none;
+	}
+}
+.clas{
+	padding-right: 15px;
+}
+.show{
+	input[type=text]{
+		height: 30%;
+	}
+}
+.titulo{
+	background-color: #B0B0B0;
+	width: 80%;
+	padding-left: 5%;
+}
+.number{
+	margin-left: 4%;
+}
+.imagen{
+	margin-left: 20%;
+}
+.logg{
+	margin-left: 3%;
+	float: left;
+	a:link {
+		color: black;
+    	text-decoration: none;
+	}
+
+	a:visited {
+		color: black;
+    	text-decoration: none;
+	}
+
+	a:hover {
+		color: black;
+    	text-decoration: none;
+	}
+
+	a:active {
+		color: black;
+    	text-decoration: none;
+	}
+}
+.show{
+	margin-top: 3%;
+	text-align: center;
+}
+.showPeli{
+	text-align: left;
+	margin-left: 20%;
+}
+.currentPeli{
+	margin-top: 6%;
+}
+
+.form-submit-button {
+}
+
+input[type=submit] {
+	background: white;
+	color: black;
+	border-style: none;
+	border-color: white;
+	text-shadow:none;
+	font-size: 100%;
+}
+
+.crear{
+	margin-left: 15%;
+}
+.xs{
+	text-align: center;
+	width: 100%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	background-color: 	#FFFFFF;
+	border: 1px solid black;
+	a:link {
+		color: black;
+    	text-decoration: none;
+	}
+
+	a:visited {
+		color: black;
+    	text-decoration: none;
+	}
+
+	a:hover {
+		color: black;
+    	text-decoration: none;
+	}
+
+	a:active {
+		color: black;
+    	text-decoration: none;
+	}
+}
+.xsAviso{
+	text-align: center;
+	font-size: 120%;
+}
+footer{
+	text-align: center;
+	background-color: #E5E5E5;
+}
+.tw{
+	margin-left: 20%;
+	text-align: left;
+	float: left;
+
+	a:link {
+		color: black;
+    	text-decoration: none;
+	}
+
+	a:visited {
+		color: black;
+    	text-decoration: none;
+	}
+
+	a:hover {
+		color: black;
+    	text-decoration: none;
+	}
+
+	a:active {
+		color: black;
+    	text-decoration: none;
+	}
+
+}
+.ig{
+	text-align: left;
+	margin-left: 80%;
+
+	a:link {
+		color: black;
+    	text-decoration: none;
+	}
+
+	a:visited {
+		color: black;
+    	text-decoration: none;
+	}
+
+	a:hover {
+		color: black;
+    	text-decoration: none;
+	}
+
+	a:active {
+		color: black;
+    	text-decoration: none;
+	}
+}
+.discurso{
+	text-align: center;
+	text-indent: justify;
+	a:link {
+		color: black;
+    	text-decoration: none;
+	}
+
+	a:visited {
+		color: black;
+    	text-decoration: none;
+	}
+
+	a:hover {
+		color: black;
+    	text-decoration: none;
+	}
+
+	a:active {
+		color: black;
+    	text-decoration: none;
+	}
+}

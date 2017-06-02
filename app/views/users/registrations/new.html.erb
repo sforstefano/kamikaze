@@ -1,0 +1,45 @@
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<div class="row hidden-xs">
+    <p class="logg"><%= f.submit "Registrarse" %></p>
+    <p class="logg"><%= link_to "Inicio", root_path %> </p>
+    <p class="logg"><%= link_to "Nosotros", about_path %></p>
+  <div class="col-lg-12">
+    <div class="head">
+      <img class="imagen img-responsive" src="http://res.cloudinary.com/se-or/image/upload/v1496246942/fondo_ua1eam.jpg">
+    </div>
+  </div>
+</div>
+<div class="visible-xs">
+    <button class="xs"><%= f.submit "Registrarse" %></button>
+    <button class="xs"><%= link_to "Inicio", root_path %> </button>
+    <button class="xs"><%= link_to "Nosotros", about_path %></button>
+</div>
+<div class="container">
+  <h2>Registro</h2>
+  <br/>
+    <%= devise_error_messages! %>
+
+    <div class="field">
+      <p>Email</p>
+      <%= f.email_field :email, autofocus: true %>
+    </div>
+    <br/>
+    <div class="field">
+      <p>Contraseña</p>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+    <br/>
+    <div class="field">
+      <p>Confirmar contraseña</p>
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </div>
+<br/>
+<br/>
+  <% end %>
+
+</div>
+

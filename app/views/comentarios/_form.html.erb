@@ -1,0 +1,5 @@
+<%= form_for ([@pelicula, @pelicula.comentarios.build]) do |f| %>
+	<%= f.text_area :coment %>
+
+	<%= f.submit %>
+<% end %>

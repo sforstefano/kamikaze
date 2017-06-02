@@ -1,0 +1,16 @@
+current directory: C:/ruby_applications/movies/vendor/bundle/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
+C:/RailsInstaller/Ruby2.3.0/bin/ruby.exe -r ./siteconf20170525-17476-1iw21do.rb extconf.rb
+creating Makefile
+
+current directory: C:/ruby_applications/movies/vendor/bundle/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: C:/ruby_applications/movies/vendor/bundle/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+generating cruby-i386-mingw32.def
+compiling cruby.c
+linking shared-object bindex/cruby.so
+
+current directory: C:/ruby_applications/movies/vendor/bundle/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20170525-17476-1szv97y/bindex

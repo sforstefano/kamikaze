@@ -1,0 +1,43 @@
+<link rel="stylesheet" type="text/css" href="stylesheet/peliculas.css.scss">
+<div class="hidden-xs">
+<%= form_for @pelicula, html: { multipart: true } do |futbol| %>
+<div class="row">
+		<p class="logg"><%= futbol.submit "Añadir" %></p>
+		<p class="logg"> <%=link_to "Inicio", root_path %></p>
+	<div class="col-lg-12">
+		<div class="head">
+			<img class="imagen" src="http://res.cloudinary.com/se-or/image/upload/v1496246942/fondo_ua1eam.jpg">
+			<% if user_signed_in? %>
+			<% end %>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="crear">
+					<p>Tiutulo</p>
+					<p><%= futbol.text_field :name  %></p>
+					<br/>
+					<p>Puntuación:</p>
+					<p><%= futbol.text_field :stars %></p>
+					<br/>
+					<p>Actor principal</p>
+					<p><%= futbol.text_field :main_actor %></p>
+					<br/>
+					<p>Año</p>
+					<p><%= futbol.text_field :year %></p>
+					<br/>
+					<p>Sinposis</p>
+					<p><%= futbol.text_field :description, :class => "desc"%></p>
+					<br/>
+					<p>Poster</p>
+					<p><%= futbol.file_field :poster %></p>
+					<br/>
+		<% end %>
+	</div>
+</div>
+</div>
+<div class="col-xs-12 visible-xs">
+<p class="xsAviso">No disponible en versión mobil.</p>
+<br/>
+<button class="xs"><%=link_to "Volver a inicio", root_path %></button>
+</div>

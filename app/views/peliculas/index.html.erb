@@ -1,0 +1,95 @@
+<link rel="stylesheet" type="text/css" href="stylesheet/peliculas.css.scss">
+<div class="row hidden-xs">
+	<% if user_signed_in? %>
+		<p class="logg" ><%= link_to "Añadir pelicula", new_pelicula_path %></p>
+		<p class="logg"> <%=link_to "Salir", destroy_user_session_path, :method => :delete %></p>
+	<% else %>
+		<p class="logg" ><%=link_to "Entrar", new_user_session_path %></p>
+		<p class="logg"><%=link_to "Registrate", new_user_registration_path %></p>
+		<p class="logg"><%= link_to "Nosotros", about_path %></p>
+	<% end %>
+	<div class="col-lg-12">
+		<div class="head">
+			<img class="imagen img-responsive" src="http://res.cloudinary.com/se-or/image/upload/v1496246942/fondo_ua1eam.jpg">
+			<% if user_signed_in? %>
+			<% end %>
+		</div>
+	</div>
+</div>
+<div class="row col -xs-12 visible-xs">
+		<% if user_signed_in? %>
+			<button class="xs"> <%=link_to "Salir", destroy_user_session_path, :method => :delete %></button>
+			<button class="xs"><%= link_to "Nosotros", about_path %></button>
+		<% else %>
+			<button class="xs"><%=link_to "Entrar", new_user_session_path %></button><br/>
+			<button class="xs"><%=link_to "Registrate", new_user_registration_path %></button><br/>
+			<button class="xs"><%= link_to "Nosotros", about_path %></button>
+		<% end %>
+</div>
+<br/>
+<div class="container">
+	<div class="row">
+			<div class="col-lg-12 col-xs-12">
+				<div class="lista">
+					<h3 class="todo">Nuestras peliculas</h3>
+					<br/>
+					<% @peliculas.limit(10).each do |pelis| %>
+						<div class="peliculas">
+							<h5 class="titulo"><%= link_to pelis.name, pelis %></h5>
+						</div>
+					<% end %>
+				</div>
+			</div>
+	</div>
+	<br/>
+	<br/>
+	<div class="row">
+		<div class="col-lg-4 col-md-4 col-xs-12">
+				<div class="year">
+					<h4 class="number">Lo mejor de 2017</h4>
+					<% @peliculas.each do |peli| %>
+						<% if peli.year === 2017 && peli.stars === 5 %>
+							<div class="peliculas">
+								<h5 class="titulo"><%= link_to peli.name, peli %></h5>
+							</div>
+						<% end %>
+					<% end %>
+				</div>
+		</div>
+
+		<div class="col-lg-6 col-md-6 col-xs-12">
+				<div class="top-time">
+					<h4 class="top-time-title">Top Movies of All Times</h4>
+					<% @peliculas.each do |peli2| %>
+						<% if peli2.stars === 5 %>
+					<div class="peliculas">
+						<h5 class="titulo"><%= link_to peli2.name, peli2 %></h5>
+					</div>
+					<% end %>
+					<% end %>
+				</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-4 col-md-4 col-xs-12">
+			<div class="year">
+				<h4 class="number">Lo mejor de 2016</h4>
+					<% @peliculas.each do |peli3| %>
+						<% if peli3.year === 2016 && peli3.stars === 5 %>
+							<div class="peliculas">
+								<h5 class="titulo"><%= link_to peli3.name, peli3 %></h5>
+							</div>
+						<% end %>
+					<% end %>
+				</h4>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
