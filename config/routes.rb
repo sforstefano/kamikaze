@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
 root :to => "peliculas#index"
 get '/about' => 'statics#about', :as => 'about'
   devise_for :users
