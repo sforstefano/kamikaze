@@ -1,0 +1,8 @@
+<link rel="stylesheet" type="text/css" href="stylesheet/peliculas.css.scss">
+<% @peliculas.each do |peli| %>
+	<% if peli.year === 2017 && peli.stars === 5 %>
+		<div class="peliculas">
+			<h5 class="titulo"><%= link_to peli.name, peli %></h5>
+		</div>
+	<% end %>
+<% end %>
