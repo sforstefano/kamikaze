@@ -1,0 +1,7 @@
+<% @peliculas.each do |peli3| %>
+	<% if peli3.year === 2016 && peli3.stars === 5 %>
+		<div class="peliculas">
+			<h5 class="titulo"><%= link_to peli3.name, peli3 %></h5>
+		</div>
+	<% end %>
+<% end %>
