@@ -33,11 +33,7 @@
 				<div class="lista">
 					<h3 class="todo">Nuestras peliculas</h3>
 					<br/>
-					<% @peliculas.limit(10).each do |pelis| %>
-						<div class="peliculas">
-							<h5 class="titulo"><%= link_to pelis.name, pelis %></h5>
-						</div>
-					<% end %>
+					<%= render 'peliculas/allm' %>
 				</div>
 			</div>
 	</div>

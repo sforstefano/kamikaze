@@ -1,0 +1,5 @@
+<% @peliculas.limit(10).each do |pelis| %>
+	<div class="peliculas">
+		<h5 class="titulo"><%= link_to pelis.name, pelis %></h5>
+	</div>
+<% end %>
