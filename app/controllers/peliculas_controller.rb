@@ -51,6 +51,8 @@ before_action :authenticate_user!, except: [:index, :show]
       #render "index"
    end
 
+   
+
    private
 
       def pelicula_params
