@@ -1,6 +1,6 @@
 class PeliculasController < ApplicationController
 
-#before_action :authenticate_user!, #except: [:index, :show]
+before_action :authenticate_user!, except: [:index, :show]
    def index
       @peliculas = Pelicula.all
       #muestra las peliculas que hay en la base de datos

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <%= csrf_meta_tags %>
+    <link rel="stylesheet" type="text/css" href="stylesheet/peliculas.css.scss">
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+   <footer>Created and designed by Stefano Cattoni with a lot of help.<br> Copyright sforstefano 2017
+   <br/><br/></footer>
+   <a href="https://twitter.com/sforstefano/"><p class="tw">Twitter<p></a><a href="https://www.instagram.com/sforstefano/"><p class="ig">Instagram</p></a>
+  </body>
+</html>
