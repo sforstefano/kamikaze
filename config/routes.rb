@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 root :to => "peliculas#index"
 get '/about' => 'statics#about', :as => 'about'
-  devise_for :users, :settings
+  devise_for :users
 
   #get 'statics/index'
 

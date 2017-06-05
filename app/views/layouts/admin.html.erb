@@ -11,6 +11,22 @@
   </head>
 
   <body>
+    <div class="row hidden-xs">
+        <p class="logg"><%=link_to "Inicio", root_path %></p>
+        <p class="logg"> <%=link_to "Salir", destroy_user_session_path, :method => :delete %></p>
+        <p class="logg"><%= link_to "Nosotros", about_path %></p>
+      <div class="col-lg-12">
+        <div class="head">
+          <img class="imagen img-responsive" src="http://res.cloudinary.com/se-or/image/upload/v1496246942/fondo_ua1eam.jpg">
+        </div>
+      </div>
+    </div>
+    <div class="row col -xs-12 visible-xs">
+          <button class="xs" ><%=link_to "Inicio", root_path %></button>
+          <button class="xs"><%=link_to "Salir", destroy_user_session_path, :method => :delete %></button>
+          <button class="xs"><%= link_to "Nosotros", about_path %></button>
+    </div>
+    <br/>
     <%= yield %>
 
     <br/>
