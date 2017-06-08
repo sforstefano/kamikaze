@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
   		admin_root_path
   	end
   end
+   before_filter :sanitize_devise_params, if: :devise_controller?
+  def sanitize_devise_params
+  	devise_parameter_sanitizer.permit(:sign_up, keys:[:username])
+  end
 
   
 end

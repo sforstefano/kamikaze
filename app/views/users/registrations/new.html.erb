@@ -19,7 +19,11 @@
   <h2>Registro</h2>
   <br/>
     <%= devise_error_messages! %>
-
+    <div class="field">
+      <p>Name</p>
+      <%= f.text_field :username %>
+    </div>
+    <br/>
     <div class="field">
       <p>Email</p>
       <%= f.email_field :email, autofocus: true %>
