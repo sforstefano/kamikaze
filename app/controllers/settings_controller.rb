@@ -20,11 +20,24 @@ class SettingsController < ApplicationController
   	else
   		render :new
   	end
+  end
+
+  def edit
+  	@setting = current_user.setting.find(params[:id])
+  end
+
+  def update
+  	@setting = current_user.setting.find(params[:id])
+  	if @setting.update_attributes(setting_params)
+  		redirect_to settings_path
+  	else
+  		render :index
+  	end
+  end
 
   	private
 
   	def setting_params
   		params.require(:setting).permit(:language, :country)
   	end
-  end
 end
